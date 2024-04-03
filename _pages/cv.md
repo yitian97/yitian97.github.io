@@ -11,35 +11,35 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Automatic Control, Robotics and Computer Vision, Universidad Politécnica de Cataluña, 2025 (expected)
+* M.S. in Applications and Technologies for Unmanned Aircraft Systems (Drones), Universidad Politécnica de Cataluña, 2019
+* B.S. in Aircraft design and engineering, Beihang University, 2013
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* March.2020 - 2025: Predoctoral researcher
+  * Institut de Robòtica i Informàtica Industrial (IRI)
+  * Duties includes: Work on spiking neural network for event-camera motion estimation. 
+  * Supervisor: Juan Andrade Cetto
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Oct.2018 - July.2019: Research Intern
+  * Centre Tecnològic de Telecomunicacions de Catalunya (CTTC)
+  * Duties included: Assist in drone photogrammetry research work. Develop independently a project for my master thesis. The project aims to develop a prototype of UAV payload for Indoor localization and mapping for civil protection uses. The system is based on visual SLAM and sensor data fusion.
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+
+* Sep.2013 - Sep.2017: Aeronautical engineer
+  * Commercial Aircraft Corporation of China Ltd. (COMAC)
+  * Duties included: Writing structure and equipment chapters in AIPC (Aircraft Illustrated Parts Catalog) and AMM (Aircraft Maintenance Manual) for C919, based on S1000D specification; Verification work for Maintenance Task Analysis (MTA); Evaluation work of AMM for ARJ-21 following the continuous airworthiness after delivery
+ 
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Deep learning
+* Neuromorphic engineering
+  #* python
+  #* Sub-skill 2.2
+  #* Sub-skill 2.3
+#* Skill 3
 
 Publications
 ======
