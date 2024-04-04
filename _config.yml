@@ -24,11 +24,11 @@ author:
   avatar           : "myprofile.JPG"
   name             : "Yi Tian"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "PhD student in Robotics"
   location         : "Barcelona, Spain"
-  employer         : [Institut de Robòtica i Informàtica Industrial (IRI)](https://www.iri.upc.edu/)
-  uri              : # "https://www.iri.upc.edu/"
-  email            : [ytian@iri.upc.edu]("ytian@iri.upc.edu") 
+  employer         : "Institut de Robòtica i Informàtica Industrial (IRI)"
+  uri              :  "https://www.iri.upc.edu/staff/ytian"
+  email            : "ytian@iri.upc.edu"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -47,7 +47,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : # "bsky.app"  Replace this with you Bluesky username
+  bluesky          : # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
