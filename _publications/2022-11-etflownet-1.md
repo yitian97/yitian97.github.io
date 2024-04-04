@@ -1,7 +1,7 @@
 ---
 title: "**Event transformer FlowNet for optical flow estimation**"
 collection: publications
-permalink: /publication/2022-11-paper-ETflownet
+permalink: /publication/2022-11-etflownet-1
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2022-11
 venue: '2022 British Machine Vision Conference'
