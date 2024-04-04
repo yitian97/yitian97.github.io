@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Yi Tian"
 title_separator          : "-"
 name                     : &name "Yi Tian"
-description              : &PhD student in Robotics"
+description              : &¨PhD student in Robotics"
 url                      : https://yitian97.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "yitian97/yitian97.github.io"
@@ -21,13 +21,13 @@ repository               : "yitian97/yitian97.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "myprofile.JPG"
   name             : "Yi Tian"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Barcelona, Spain"
-  employer         : "Institut de Robòtica i Informàtica Industrial"
-  uri              : "https://www.iri.upc.edu/"
+  employer         : [Institut de Robòtica i Informàtica Industrial (IRI)](https://www.iri.upc.edu/)
+  uri              : # "https://www.iri.upc.edu/"
   email            : [ytian@iri.upc.edu]("ytian@iri.upc.edu") 
 
   # Academic websites
@@ -47,7 +47,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          :  #"bsky.app" # Replace this with you Bluesky username
+  bluesky          : # "bsky.app"  Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
