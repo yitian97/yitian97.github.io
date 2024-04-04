@@ -1,7 +1,7 @@
 ---
 title: "Egomotion from event-based SNN optical flow"
 collection: publications
-permalink: /publication/2023-08-egomotionSNN-2
+permalink: /publication/2023-08-egomotion-snn-2
 excerpt: 'This paper is about fixing template issue #693.'
 date: 2023-08
 venue: '2023 ACM International Conference on Neuromorphic Systems, 2023'
