@@ -35,11 +35,10 @@ Work experience
 Skills
 ======
 * Deep learning
+* Computer vision
+* Robotics
 * Neuromorphic engineering
-  #* python
-  #* Sub-skill 2.2
-  #* Sub-skill 2.3
-#* Skill 3
+
 
 Publications
 ======
@@ -53,12 +52,7 @@ Talks
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
-Teaching
+Service
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* Reviewer for conferences: ICRA2023, IROS2023, IROS2024,
+* Reviewer for jourals: RAL, Frontiers in Neurorobotics

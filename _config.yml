@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Yi Tian"
+title                    : "Main"
 title_separator          : "-"
 name                     : &name "Yi Tian"
 description              : &description "PhD student in Robotics"
@@ -26,7 +26,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "PhD student in Robotics"
   location         : "Barcelona, Spain"
-  employer         : "Institut de Robòtica i Informàtica Industrial (IRI)"
+  employer         : "IRI"
   uri              :  "https://www.iri.upc.edu/staff/ytian"
   email            : "ytian@iri.upc.edu"
 
