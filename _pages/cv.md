@@ -55,4 +55,4 @@ Talks
 Service
 ======
 * Reviewer for conferences: ICRA2023, IROS2023, IROS2024,
-* Reviewer for jourals: RAL, Frontiers in Neurorobotics
+* Reviewer for jourals: RAL, Frontiers in Neurorobotics, PLUS ONE, Neurocomputing
