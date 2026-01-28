@@ -150,4 +150,31 @@
   &--small {
     font-size: $type-size-7;
   }
+  
+  /* project button - green color */
+  &--project {
+    background-color: #388e3c;
+    
+    &:hover {
+      background-color: mix(#000, #388e3c, 20%);
+    }
+  }
+  
+  /* paper button - red/orange color */
+  &--paper {
+    background-color: #d32f2f;
+    
+    &:hover {
+      background-color: mix(#000, #d32f2f, 20%);
+    }
+  }
+  
+  /* code button - blue color */
+  &--code {
+    background-color: #1976d2;
+    
+    &:hover {
+      background-color: mix(#000, #1976d2, 20%);
+    }
+  }
 }

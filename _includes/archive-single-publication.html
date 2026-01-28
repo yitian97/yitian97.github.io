@@ -6,7 +6,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
+<div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <div class="archive__item-header">
       <h2 class="archive__item-title" itemprop="headline">
@@ -14,9 +14,18 @@
       </h2>
       
       <div class="publication__links">
-        {% if post.link %}
-          <a href="{{ post.link }}" target="_blank" class="btn btn--paper">
-            <i class="fas fa-external-link-alt" aria-hidden="true"></i> Link
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}" target="_blank" class="btn btn--paper">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i> Paper
+          </a>
+        {% endif %}
+        {% if post.codeurl %}
+          <a href="{{ post.codeurl }}" target="_blank" class="btn btn--code">
+            <i class="fab fa-github" aria-hidden="true"></i> Code
+          </a>
+        {% elsif post.github %}
+          <a href="https://github.com/{{ post.github }}" target="_blank" class="btn btn--code">
+            <i class="fab fa-github" aria-hidden="true"></i> Code
           </a>
         {% endif %}
       </div>
@@ -24,7 +33,7 @@
     
     <p class="archive__item-meta">
       {% if post.venue %}
-        {% if post.type %}{{ post.type }}, {% endif %}<i>{{ post.venue }}</i>{% if post.location %}, {{ post.location }}{% endif %}
+        <i>{{ post.venue }}</i>
         {% if post.date %}
           , {{ post.date | date: "%Y" }}
         {% endif %}

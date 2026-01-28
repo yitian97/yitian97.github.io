@@ -38,13 +38,19 @@ layout: default
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.date %}
+        {% elsif page.collection != 'portfolio' and page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}    
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% if page.collection == 'portfolio' and page.excerpt %}
+          <div class="portfolio__detail-excerpt">
+            {{ page.excerpt | markdownify }}
+          </div>
+        {% endif %}
+        
         {{ content }}
 
         {% if page.citation and page.paperurl %}
@@ -53,7 +59,36 @@ layout: default
           <p style="font-size: smaller">Recommended citation: {{ page.citation }} </p>
         {% endif %}
 
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        {% if page.collection == 'portfolio' and (page.link or page.paperurl or page.codeurl or page.github or page.videourl) %}
+          <div style="margin-top: 1.5em;">
+            {% if page.link %}
+              <a href="{{ page.link }}" target="_blank" class="btn btn--project">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> View Project
+              </a>
+            {% endif %}
+            {% if page.paperurl %}
+              <a href="{{ page.paperurl }}" target="_blank" class="btn btn--paper">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Paper
+              </a>
+            {% endif %}
+            {% if page.codeurl %}
+              <a href="{{ page.codeurl }}" target="_blank" class="btn btn--code">
+                <i class="fab fa-github" aria-hidden="true"></i> Code
+              </a>
+            {% elsif page.github %}
+              <a href="https://github.com/{{ page.github }}" target="_blank" class="btn btn--code">
+                <i class="fab fa-github" aria-hidden="true"></i> Code
+              </a>
+            {% endif %}
+            {% if page.videourl %}
+              <a href="{{ page.videourl }}" target="_blank" class="btn btn--code">
+                <i class="fab fa-youtube" aria-hidden="true"></i> Video
+              </a>
+            {% endif %}
+          </div>
+        {% elsif page.link %}
+          <div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>
+        {% endif %}
       </section>
 
       <footer class="page__meta">

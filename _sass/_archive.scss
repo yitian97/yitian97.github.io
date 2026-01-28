@@ -13,6 +13,21 @@
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
   }
+  
+  /* Full width when no sidebar */
+  &:not(:has(+ .sidebar)) {
+    @include breakpoint($large) {
+      @include span(12 of 12);
+      @include prefix(0);
+    }
+  }
+}
+
+/* Portfolio page - full width */
+.portfolio-grid {
+  @include breakpoint($large) {
+    max-width: 100%;
+  }
 
   a {
     text-decoration: underline;
@@ -42,10 +57,20 @@
 .archive__item-title {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
+  margin-right: 1em;
+  flex: 1;
 
   a + a {
     opacity: 0.5;
   }
+}
+
+.archive__item-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-bottom: 0.25em;
 }
 
 /* remove border*/
@@ -63,6 +88,58 @@
 
   & + p {
     text-indent: 0;
+  }
+}
+
+.archive__item-meta {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  font-size: $type-size-6;
+  color: mix(#fff, $gray, 25%);
+  
+  a {
+    text-decoration: none;
+    color: $link-color;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.publication__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  flex-shrink: 0;
+  
+  .btn {
+    margin-bottom: 0;
+    padding: 0.4em 0.8em;
+    font-size: $type-size-7;
+    white-space: nowrap;
+    
+    i {
+      margin-right: 0.3em;
+    }
+  }
+}
+
+/* Portfolio project links (buttons under portfolio cards) */
+.portfolio__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+
+  .btn {
+    margin-bottom: 0;
+    padding: 0.35em 0.7em;
+    font-size: $type-size-7;
+
+    i {
+      margin-right: 0.3em;
+      font-size: 0.65em; /* make the icon smaller */
+    }
   }
 }
 
@@ -90,6 +167,8 @@
    ========================================================================== */
 
 .list__item {
+  margin-bottom: 0.5em;
+  
   @include breakpoint($medium) {
     padding-right: $right-sidebar-width-narrow;
   }
@@ -148,6 +227,145 @@
       display: block;
       font-size: $type-size-6;
     }
+  }
+}
+
+/* Portfolio grid - 3 items per row */
+.portfolio-grid {
+  @include clearfix();
+  margin-bottom: 2em;
+  width: 100%;
+  
+  .grid__item {
+    margin-bottom: 2em;
+    padding: 0 1em;
+    
+    /* Reset general grid styles */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    
+    article {
+      background-color: $background-color;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      padding: 1.5em;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: $global-transition;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      
+      &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+      }
+    }
+    
+    /* Small screens: 2 items per row for mobile */
+    @include breakpoint($small) {
+      @include span(6 of 12); /* 2 items per row */
+      padding: 0 0.5em;
+      &:nth-child(2n+1) {
+        clear: left;
+      }
+      article {
+        padding: 1em;
+      }
+      .archive__item-teaser {
+        max-height: 200px;
+      }
+    }
+
+    /* Medium screens and up: 3 items per row */
+    @include breakpoint($medium) {
+      margin-left: 0 !important; /* reset before mixin */
+      margin-right: 0 !important; /* reset before mixin */
+      @include span(4 of 12); /* 3 items per row (12/4 = 3) */
+      padding: 0 0.75em;
+      &:nth-child(2n+1) {
+        clear: none; /* Reset clear from small breakpoint */
+      }
+      &:nth-child(3n+1) {
+        clear: left; /* Clear every 3rd item */
+      }
+      .archive__item-teaser {
+        max-height: 180px;
+        border-radius: $border-radius;
+        overflow: hidden;
+        margin-bottom: 1em;
+      }
+    }
+
+    /* Large screens: 3 items per row */
+    @include breakpoint($large) {
+      margin-left: 0 !important; /* reset before mixin */
+      margin-right: 0 !important; /* reset before mixin */
+      @include span(4 of 12); /* 3 items per row */
+      padding: 0 1em;
+      &:nth-child(3n+1) {
+        clear: left;
+      }
+      .archive__item-teaser {
+        max-height: 200px;
+      }
+    }
+
+    .archive__item-title {
+      margin-top: 0;
+      margin-bottom: 0.75em;
+      font-size: $type-size-4;
+      
+      a {
+        color: $text-color;
+        text-decoration: none;
+        
+        &:hover {
+          color: $link-color;
+        }
+      }
+    }
+
+    .archive__item-excerpt {
+      display: block;
+      font-size: $type-size-6;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+      flex-grow: 1;
+      line-height: 1.6;
+    }
+    
+    .portfolio__skills {
+      margin-top: auto;
+      padding-top: 1em;
+      border-top: 1px solid $border-color;
+    }
+  }
+}
+
+/* Portfolio skills/tags */
+.portfolio__skills {
+  margin-top: 0.75em;
+  margin-bottom: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.portfolio__skill {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  font-size: $type-size-7;
+  font-weight: 500;
+  color: $text-color;
+  background-color: $lighter-gray;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  white-space: nowrap;
+  transition: $global-transition;
+  
+  &:hover {
+    background-color: mix($lighter-gray, $primary-color, 90%);
+    border-color: $primary-color;
   }
 }
 
