@@ -22,8 +22,18 @@ function updateNav() {
     // Record the width of the list
     breaks.push($vlinks.width());
 
-    // Move item to the hidden list
-    $vlinks.children().last().prependTo($hlinks);
+    // Find the last item that is not the theme toggle
+    var $lastItem = $vlinks.children().last();
+    if($lastItem.find('.theme-toggle').length > 0) {
+      // Skip theme toggle, try the previous item
+      $lastItem = $lastItem.prev();
+    }
+    
+    // Only move if it's not the theme toggle
+    if($lastItem.length > 0 && $lastItem.find('.theme-toggle').length === 0) {
+      // Move item to the hidden list
+      $lastItem.prependTo($hlinks);
+    }
 
     // Show the dropdown btn
     if($btn.hasClass('hidden')) {
@@ -36,9 +46,18 @@ function updateNav() {
     // There is space for another item in the nav
     if(availableSpace > breaks[breaks.length-1]) {
 
-      // Move the item to the visible list
-      $hlinks.children().first().appendTo($vlinks);
-      breaks.pop();
+      // Move the item to the visible list (but before theme toggle)
+      var $firstHidden = $hlinks.children().first();
+      if($firstHidden.length > 0) {
+        // Insert before theme toggle if it exists, otherwise just append
+        var $themeToggle = $vlinks.find('.theme-toggle').closest('li');
+        if($themeToggle.length > 0) {
+          $firstHidden.insertBefore($themeToggle);
+        } else {
+          $firstHidden.appendTo($vlinks);
+        }
+        breaks.pop();
+      }
     }
 
     // Hide the dropdown btn if hidden list is empty

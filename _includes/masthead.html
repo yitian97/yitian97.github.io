@@ -10,14 +10,28 @@
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
-              {% else %}
+            {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+
+            {% if link.title == "CV" %}
+              <li class="masthead__menu-item">
+                <a href="{{ domain }}{{ link.url }}" download>{{ link.title }}</a>
+              </li>
+            {% else %}
+              <li class="masthead__menu-item">
+                <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
+      <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="icon-moon" aria-hidden="true"><i class="fas fa-moon"></i></span>
+        <span class="icon-sun" aria-hidden="true"><i class="fas fa-sun"></i></span>
+        <span class="theme-toggle-text">Theme</span>
+      </button>
     </div>
   </div>
 </div>
