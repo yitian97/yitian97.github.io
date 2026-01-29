@@ -25,6 +25,6 @@ group :jekyll_plugins do
   # gem "jekyll-archives"
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
-  gem 'hawkins'
+  # gem 'hawkins'  # Development-only plugin, not needed for GitHub Pages
   gem "webrick", "~> 1.8"
 end
