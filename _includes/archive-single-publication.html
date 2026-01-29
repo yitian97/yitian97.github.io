@@ -14,9 +14,24 @@
       </h2>
       
       <div class="publication__links">
+        {% if post.link %}
+          <a href="{{ post.link }}" target="_blank" class="btn btn--paper">
+            <i class="fas fa-external-link-alt" aria-hidden="true"></i> Website
+          </a>
+        {% endif %}
         {% if post.paperurl %}
           <a href="{{ post.paperurl }}" target="_blank" class="btn btn--paper">
             <i class="fas fa-file-pdf" aria-hidden="true"></i> Paper
+          </a>
+        {% endif %}
+        {% if post.posterurl %}
+          <a href="{{ post.posterurl }}" target="_blank" class="btn btn--project">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i> Poster
+          </a>
+        {% endif %}
+        {% if post.supplementaryurl %}
+          <a href="{{ post.supplementaryurl }}" target="_blank" class="btn btn--paper">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i> Supplementary
           </a>
         {% endif %}
         {% if post.codeurl %}

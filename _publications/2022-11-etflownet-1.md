@@ -9,6 +9,7 @@ excerpt: 'Event cameras are bioinspired sensors that produce asynchronous and sp
 date: 2022-11-21
 venue: '2022 British Machine Vision Conference'
 paperurl: 'http://www.iri.upc.edu/files/scidoc/2645-Event-transformer-FlowNet-for-optical-flow-estimation.pdf'
+link: 'https://bmvc2022.mpi-inf.mpg.de/577/'
 citation: 'Y. Tian and J. Andrade-Cetto. Event transformer FlowNet for optical flow estimation, 2022 British Machine Vision Conference, 2022, London.'
 
 ---

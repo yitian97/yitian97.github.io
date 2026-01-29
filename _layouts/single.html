@@ -86,6 +86,38 @@ layout: default
               </a>
             {% endif %}
           </div>
+        {% elsif page.collection == 'publications' and (page.link or page.paperurl or page.posterurl or page.supplementaryurl or page.codeurl or page.github) %}
+          <div style="margin-top: 1.5em;">
+            {% if page.link %}
+              <a href="{{ page.link }}" target="_blank" class="btn btn--paper">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Website
+              </a>
+            {% endif %}
+            {% if page.paperurl %}
+              <a href="{{ page.paperurl }}" target="_blank" class="btn btn--paper">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Paper
+              </a>
+            {% endif %}
+            {% if page.posterurl %}
+              <a href="{{ page.posterurl }}" target="_blank" class="btn btn--project">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Poster
+              </a>
+            {% endif %}
+            {% if page.supplementaryurl %}
+              <a href="{{ page.supplementaryurl }}" target="_blank" class="btn btn--paper">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Supplementary
+              </a>
+            {% endif %}
+            {% if page.codeurl %}
+              <a href="{{ page.codeurl }}" target="_blank" class="btn btn--code">
+                <i class="fab fa-github" aria-hidden="true"></i> Code
+              </a>
+            {% elsif page.github %}
+              <a href="https://github.com/{{ page.github }}" target="_blank" class="btn btn--code">
+                <i class="fab fa-github" aria-hidden="true"></i> Code
+              </a>
+            {% endif %}
+          </div>
         {% elsif page.link %}
           <div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>
         {% endif %}
