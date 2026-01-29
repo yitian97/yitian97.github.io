@@ -48,3 +48,12 @@ author_profile: false
 {% for post in site.talks reversed %}
   {% include archive-single-talk.html %}
 {% endfor %}
+
+## Services
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <p><strong>Reviewer for journals:</strong> IEEE Robotics and Automation Letters (RAL), Frontiers in Neurorobotics, PLOS ONE, Neurocomputing, IEEE Transactions on Aerospace and Electronic Systems (IEEE TAES)</p>
+    <p><strong>Reviewer for conferences:</strong> ICRA, IROS</p>
+  </article>
+</div>
