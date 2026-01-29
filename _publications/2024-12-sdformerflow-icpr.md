@@ -6,6 +6,6 @@ excerpt: 'Event cameras generate asynchronous and sparse event streams capturing
 <img src="/files/SDFormerflow.gif" width="960" height="231" />'
 date: 2024-12-01
 venue: '2024 International Conference on Pattern Recognition (ICPR)'
-paperurl: 'https://arxiv.org/abs/2409.04082'
+paperurl: 'https://link.springer.com/chapter/10.1007/978-3-031-78354-8_30'
 citation: 'Y. Tian and J. Andrade-Cetto. SDformerFlow: Spiking Neural Network Transformer for Event-based Optical Flow, 2024 International Conference on Pattern Recognition (ICPR), 2024.'
 ---

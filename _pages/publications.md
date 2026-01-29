@@ -17,6 +17,28 @@ author_profile: false
   {% include archive-single-publication.html %}
 {% endfor %}
 
+## Thesis
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="archive__item-header">
+      <h2 class="archive__item-title" itemprop="headline">
+        Bio-inspired event-driven intelligence for motion estimation
+      </h2>
+      
+      <div class="publication__links">
+        <a href="https://hdl.handle.net/2117/430026" target="_blank" class="btn btn--paper">
+          <i class="fas fa-external-link-alt" aria-hidden="true"></i> Link
+        </a>
+      </div>
+    </div>
+    
+    <p class="archive__item-meta">
+      <i>Universitat Politècnica de Catalunya</i>, 2025
+    </p>
+  </article>
+</div>
+
 ## Talks
 
 {% if site.talkmap_link == true %}

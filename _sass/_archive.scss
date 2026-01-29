@@ -55,7 +55,7 @@
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.1em;
   font-family: $sans-serif-narrow;
   margin-right: 1em;
   flex: 1;
@@ -92,8 +92,8 @@
 }
 
 .archive__item-meta {
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
   font-size: $type-size-6;
   color: mix(#fff, $gray, 25%);
   
@@ -158,6 +158,18 @@
 
   .archive__item-title {
     text-decoration: underline;
+    
+    /* Remove underline on hover for publications */
+    &:not(a) {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Remove hover underline for publication titles */
+.list__item .archive__item-title {
+  &:hover {
+    text-decoration: none !important;
   }
 }
 
@@ -167,7 +179,7 @@
    ========================================================================== */
 
 .list__item {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
   
   @include breakpoint($medium) {
     padding-right: $right-sidebar-width-narrow;

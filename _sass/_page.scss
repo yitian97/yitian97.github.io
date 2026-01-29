@@ -107,6 +107,13 @@
   }
 }
 
+/* Green color for Publications, Thesis, and Talks section headings on publications page */
+.archive > h2:first-of-type,
+.archive > h2:nth-of-type(2),
+.archive > h2:nth-of-type(3) {
+  color: #388e3c !important; /* Green for Publications, Thesis, and Talks subsections only */
+}
+
 .page__hero {
   position: relative;
   margin-bottom: 2em;
