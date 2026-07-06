@@ -16,7 +16,7 @@
 
             {% if link.title == "CV" %}
               <li class="masthead__menu-item">
-                <a href="{{ domain }}{{ link.url }}" download>{{ link.title }}</a>
+                <a href="{{ domain }}{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
               </li>
             {% else %}
               <li class="masthead__menu-item">
